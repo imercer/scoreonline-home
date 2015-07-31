@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ScoreOnline</title>
+    <link rel="stylesheet" href="/css/style.css">
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><style type="text/css"></style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.blue_grey-indigo.min.css" /> 
+    <link rel="stylesheet" href="/css/card.css"/>
+  <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+</head>
+<body>
+<!-- Uses a header that scrolls with the text, rather than staying
+  locked at the top -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">ScoreOnline</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <!--<a class="mdl-navigation__link" href="/login_scorer.php">Login</a>-->
+      </nav>
+    </div>
+  </header>
+
+  <main class="mdl-layout__content">
+    <div class="page-content">
+<div class="homevid">
+<video width="100%" autoplay loop muted>
+<source src="/videoplayback.mp4" type="video/mp4">
+</video>  
+<div class="homehead">
+<div id="heading">
+<h2 style="color: #111">The easy and efficent way to score sports games</h2>
+   <a href="#features"><img src="/down.png" height="64px" width="64px" style="color:#444"></img></a>
+</div>
+</div>
+</div>
+<div id="features" style="width:101%"><a href="headingcont"></a>
+    <br>
+    <br>
+    <br>
+<div id="wrapper" style="color: #000; background-color: #FFF; width: 100%; font-family: Roboto; text-align: left; padding-left: 1%; padding-right: 0">
+<div id="first" style="width: 30%; text-align: right; padding-right: 15px">
+<h2>Learn</h2>
+<h3>Learn about New Zealand's essential road rules with a quick and easy to navigate interface.</h3>
+</div>
+<div id="third" style="width: 30%; padding-left: 15px">
+<br>
+<h3>Find out about the rules that confuse the most drivers through written, easy to understand rules in your language <!-- or through an animated video with voiceovers in your language. --></h3>
+</div>
+</div>
+<br>
+<br>
+<br>
+<div id="wrapper" style="color: #000; background-color: #FFF; width: 100%; font-family: Roboto; text-align: left; padding-left: 1%; padding-right: 0">
+<div id="first" style="width: 30%; text-align: right">
+<h2>Test</h2>
+<h3>Quiz your undertanding of New Zealand's road rules with a quick and fun test.</h3>
+</div>
+<div id="third" style="width: 30%">
+<br>
+<h3>Run through a simple, quick and fun quiz with multi-choice answers related to New Zealand road rules, or perform a "What Next?" scenario involving a simple to use driving simulation which responds based on your answer, the choice is up to you. </h3>
+</div>
+</div>
+<br>
+<br>
+<br>
+<div id="wrapper" style="color: #000; background-color: #FFF; width: 100%; font-family: Roboto; text-align: left; padding-left: 1%; padding-right: 0">
+<div id="first" style="width: 30%; text-align: right">
+<h2>Drive</h2>
+<h3>Receive targeted driving based alerts, view popular places and areas on a map and keep up to date with the latest road clousures on the state highway network.</h3>
+</div>
+<div id="third" style="width: 30%">
+<br>
+<h3>View a map with popular areas and high-risk roads outlined, view a list of road closures and the road status for important roads and areas and get alerted with targed audio messages when approaching high-risk driving areas and regular generic prompts to ensure you are kept safe while driving. </h3>
+</div>
+</div>
+<br>
+<br>
+<br>
+<!--
+<div id="wrapper" style="color: #000; background-color: #FFF; width: 100%; font-family: Roboto; text-align: left; padding-left: 1%; padding-right: 0">
+<div id="first" style="width: 30%; text-align: right">
+<h2>Features</h2>
+<h3>This app provides you with an easy to use interface which allows you to complete many tasks.</h3>
+</div>
+<div id="third" style="width: 30%">
+<h3>Learn about some of the essential rules in New Zealand, quiz yourself with a simple test and receive audible alerts reminding you of key rules and specific tips when driving in select danger hotspot areas. </h3>
+</div>
+</div>
+--> 
+<div id="wrapper" style="color: #000; background-color: #FFF; width: 100%; font-family: Roboto; text-align: left; padding-left: 1%; padding-right: 0">
+<div id="first" style="width: 30%; text-align: right">
+<h2>Get</h2>
+<h3>You can install this app onto your mobile device<sup>*</sup> and get started right away.</h3>
+</div>
+<div id="third" style="width: 30%">
+<h3>Download the app and you are away, you will start to receive the alerts when entering high-risk locations, driving on dangerous roads and at regular intervals. No configuring your car, phone, buying special adapters or spending hundreds of dollars. All you need is a compatabile smartphone or tablet<sup>*</sup>.</h3>
+</div>
+</div>
+<br>
+<br>
+<br>
+</div>
+<div id="wrapper" style="color: #000; background-color: #FFF; width: 100%; font-family: Roboto; text-align: left; padding-left: 1%; padding-right: 0; padding-bottom: 0">
+    <div id="footer"><sup>*</sup>Available from the Google Play Store and the App Store. Some devices may not support all functionality see <a href="/about.html#devices">About</a> for further details. This app is not accosiated with the New Zealand government, NZTA or the AA. This app is not responsible for you having an accident or crash, it is not guaranteed to stop you from crashing however it will assist you with driving safely. </div>
+    </div>
+</body></html>
