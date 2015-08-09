@@ -36,7 +36,9 @@
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
-
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
     <link rel="canonical" href="http://www.example.com/">
@@ -57,9 +59,34 @@
       margin-bottom: 40px;
       z-index: 900;
     }
+    .ui-dialog-titlebar {
+     display: none;
+    }
     </style>
+  <script>
+  $(function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      modal: true,
+      minWidth: 520,
+      minHeight: 420,
+      open: function() {
+            jQuery('.ui-widget-overlay').bind('click', function() {
+                jQuery('#dialog').dialog('close');
+            })
+        }
+    });
+ 
+    $( "#opener" ).click(function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  });
+  </script>
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+<div id="dialog" title="Welcome to ScoreOnline" style="text-align: center">
+<iframe style="width: 480px; height: 400px" src="https://www.youtube.com/embed/9sEI1AUFJKw" frameborder="0" allowfullscreen></iframe>
+</div>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
@@ -75,7 +102,7 @@
           <a href="#pricing" class="mdl-layout__tab">Pricing</a>
           <a href="#help" class="mdl-layout__tab">Help</a>
           <a href="#contact" class="mdl-layout__tab">Contact</a>
-          <a href="http://app.scoreonline.info" class="mdl-layout__tab">Login</a>
+          <a href="#login" onclick="window.document.location='http://app.scoreonline.info';" class="mdl-layout__tab">Login</a>
         </div>
       </header>
       <div class="mdl-layout__drawer">
@@ -86,32 +113,24 @@
           <a href="#pricing" class="mdl-navigation__link">Pricing</a>
           <a href="#help" class="mdl-navigation__link">Help</a>
           <a href="#contact" class="mdl-navigation__link">Contact</a>
-          <a href="http://app.scoreonline.info" class="mdl-layout__tab">Login</a>
+          <a href="http://app.scoreonline.info" class="mdl-navigation__link">Login</a>
         </nav>
       </div>
       <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="overview">
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+          <section id="opener" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
               <i class="material-icons">play_circle_filled</i>
             </header>
             <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
               <div class="mdl-card__supporting-text">
                 <h4>Features</h4>
-                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
+                ScoreOnline is a really easy way to manage your club's teams, scores and players. It allows guests to score your matches easily and in real-time from their smartphone.
               </div>
               <div class="mdl-card__actions">
-                <a href="#" class="mdl-button">Read our features</a>
+                <a id="opener" class="mdl-button">Watch a Video</a>
               </div>
             </div>
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
-              <i class="material-icons">more_vert</i>
-            </button>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
-              <li class="mdl-menu__item">Lorem</li>
-              <li class="mdl-menu__item" disabled>Ipsum</li>
-              <li class="mdl-menu__item">Dolor</li>
-            </ul>
           </section>
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
@@ -233,19 +252,20 @@
               <h2>30 Day trial period</h2>
               <br>
               <br>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="XGF8PHFWYQMU6">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+              <!--
                 <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
                 <input type="hidden" name="cmd" value="_s-xclick">
                 <input type="hidden" name="hosted_button_id" value="4GCGQAJCCR57U">
                 <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                 <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </form>
-
-          <!--    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="XGF8PHFWYQMU6">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>-->
+-->
 
      </section>
 </div>
@@ -258,6 +278,9 @@
           <section class="section--center mdl-grid mdl-grid--no-spacing">
               <h1>I dont want you contacting me</h1>
      </section>
+</div>
+ <div class="mdl-layout__tab-panel" id="login" style="text-align: center">
+          <div class="mdl-spinner mdl-js-spinner is-active" style="width: 458px; height: 458px"></div>
 </div>
       </main>
     </div>
