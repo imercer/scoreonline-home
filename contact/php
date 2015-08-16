@@ -1,0 +1,8 @@
+<?php
+echo " <script language=\"javascript\" type=\"text/javascript\">
+                // Print a message
+                alert(\"Woah! Something went wrong there. You could try again o$
+                // Redirect to some page of the site. You can also specify full$
+                window.location = \"index.html\";
+                </script>";
+?>
